@@ -14,6 +14,12 @@
 		8321463A1A9B75F3004EBBE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832146391A9B75F3004EBBE4 /* Images.xcassets */; };
 		8321463D1A9B75F3004EBBE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8321463B1A9B75F3004EBBE4 /* LaunchScreen.xib */; };
 		832146491A9B75F3004EBBE4 /* GT_WarmUp_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146481A9B75F3004EBBE4 /* GT_WarmUp_iOSTests.m */; };
+		832146581A9B7BAF004EBBE4 /* WUXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146571A9B7BAF004EBBE4 /* WUXPhoto.m */; };
+		8321465B1A9B7D91004EBBE4 /* WUXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321465A1A9B7D91004EBBE4 /* WUXProfileViewController.m */; };
+		8321465E1A9B7DC5004EBBE4 /* WUXAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321465D1A9B7DC5004EBBE4 /* WUXAlbumViewController.m */; };
+		832146611A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146601A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.m */; };
+		832146641A9B7E03004EBBE4 /* WUXFavouriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146631A9B7E03004EBBE4 /* WUXFavouriteViewController.m */; };
+		832146681A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146671A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,18 @@
 		832146421A9B75F3004EBBE4 /* GT_WarmUp_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GT_WarmUp_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832146471A9B75F3004EBBE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832146481A9B75F3004EBBE4 /* GT_WarmUp_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GT_WarmUp_iOSTests.m; sourceTree = "<group>"; };
+		832146561A9B7BAF004EBBE4 /* WUXPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXPhoto.h; path = Model/WUXPhoto.h; sourceTree = "<group>"; };
+		832146571A9B7BAF004EBBE4 /* WUXPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXPhoto.m; path = Model/WUXPhoto.m; sourceTree = "<group>"; };
+		832146591A9B7D91004EBBE4 /* WUXProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXProfileViewController.h; path = Profile/WUXProfileViewController.h; sourceTree = "<group>"; };
+		8321465A1A9B7D91004EBBE4 /* WUXProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXProfileViewController.m; path = Profile/WUXProfileViewController.m; sourceTree = "<group>"; };
+		8321465C1A9B7DC5004EBBE4 /* WUXAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXAlbumViewController.h; path = Album/WUXAlbumViewController.h; sourceTree = "<group>"; };
+		8321465D1A9B7DC5004EBBE4 /* WUXAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXAlbumViewController.m; path = Album/WUXAlbumViewController.m; sourceTree = "<group>"; };
+		8321465F1A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXPhotoDetailViewController.h; path = Album/WUXPhotoDetailViewController.h; sourceTree = "<group>"; };
+		832146601A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXPhotoDetailViewController.m; path = Album/WUXPhotoDetailViewController.m; sourceTree = "<group>"; };
+		832146621A9B7E03004EBBE4 /* WUXFavouriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXFavouriteViewController.h; path = Favourite/WUXFavouriteViewController.h; sourceTree = "<group>"; };
+		832146631A9B7E03004EBBE4 /* WUXFavouriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXFavouriteViewController.m; path = Favourite/WUXFavouriteViewController.m; sourceTree = "<group>"; };
+		832146661A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXAlbumCollectionViewCell.h; path = View/WUXAlbumCollectionViewCell.h; sourceTree = "<group>"; };
+		832146671A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXAlbumCollectionViewCell.m; path = View/WUXAlbumCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +99,11 @@
 		8321462B1A9B75F3004EBBE4 /* GT_WarmUp_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				832146651A9B7E41004EBBE4 /* View */,
+				832146551A9B7B85004EBBE4 /* Model */,
+				832146521A9B7B33004EBBE4 /* Profile */,
+				832146531A9B7B3C004EBBE4 /* Album */,
+				832146541A9B7B43004EBBE4 /* Favourite */,
 				832146301A9B75F3004EBBE4 /* AppDelegate.h */,
 				832146311A9B75F3004EBBE4 /* AppDelegate.m */,
 				832146331A9B75F3004EBBE4 /* ViewController.h */,
@@ -117,6 +140,53 @@
 				832146471A9B75F3004EBBE4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		832146521A9B7B33004EBBE4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				832146591A9B7D91004EBBE4 /* WUXProfileViewController.h */,
+				8321465A1A9B7D91004EBBE4 /* WUXProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		832146531A9B7B3C004EBBE4 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				8321465C1A9B7DC5004EBBE4 /* WUXAlbumViewController.h */,
+				8321465D1A9B7DC5004EBBE4 /* WUXAlbumViewController.m */,
+				8321465F1A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.h */,
+				832146601A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.m */,
+			);
+			name = Album;
+			sourceTree = "<group>";
+		};
+		832146541A9B7B43004EBBE4 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				832146621A9B7E03004EBBE4 /* WUXFavouriteViewController.h */,
+				832146631A9B7E03004EBBE4 /* WUXFavouriteViewController.m */,
+			);
+			name = Favourite;
+			sourceTree = "<group>";
+		};
+		832146551A9B7B85004EBBE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				832146561A9B7BAF004EBBE4 /* WUXPhoto.h */,
+				832146571A9B7BAF004EBBE4 /* WUXPhoto.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		832146651A9B7E41004EBBE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				832146661A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.h */,
+				832146671A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +233,7 @@
 		832146211A9B75F2004EBBE4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WUX;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Green Tomato";
 				TargetAttributes = {
@@ -219,9 +290,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832146611A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.m in Sources */,
 				832146351A9B75F3004EBBE4 /* ViewController.m in Sources */,
+				8321465B1A9B7D91004EBBE4 /* WUXProfileViewController.m in Sources */,
 				832146321A9B75F3004EBBE4 /* AppDelegate.m in Sources */,
 				8321462F1A9B75F3004EBBE4 /* main.m in Sources */,
+				832146581A9B7BAF004EBBE4 /* WUXPhoto.m in Sources */,
+				832146681A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m in Sources */,
+				8321465E1A9B7DC5004EBBE4 /* WUXAlbumViewController.m in Sources */,
+				832146641A9B7E03004EBBE4 /* WUXFavouriteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +489,7 @@
 				8321464E1A9B75F3004EBBE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8321464F1A9B75F3004EBBE4 /* Build configuration list for PBXNativeTarget "GT_WarmUp_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +498,7 @@
 				832146511A9B75F3004EBBE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

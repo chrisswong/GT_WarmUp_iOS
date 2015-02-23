@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Favourite View Controller-->
         <scene sceneID="4Kd-f6-td2">
             <objects>
-                <viewController id="xGj-rb-1fb" sceneMemberID="viewController">
+                <viewController id="xGj-rb-1fb" customClass="WUXFavouriteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q7V-IA-ir7"/>
                         <viewControllerLayoutGuide type="bottom" id="FDh-Ti-8dI"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="favouriteCell" id="yZp-Gm-NGP">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="favouriteCellIdentifier" id="yZp-Gm-NGP">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yZp-Gm-NGP" id="iJ1-ed-gUH">
@@ -42,16 +42,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1u4-9V-OGI" secondAttribute="trailing" constant="-16" id="zKK-LQ-pYC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tGs-nK-hKI"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="tGs-nK-hKI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6i-BS-s2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-47" y="1053"/>
         </scene>
-        <!--View Controller-->
+        <!--Album View Controller-->
         <scene sceneID="JlP-7Q-H6Q">
             <objects>
-                <viewController id="dTb-Rn-mmP" sceneMemberID="viewController">
+                <viewController id="dTb-Rn-mmP" customClass="WUXAlbumViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vnk-2m-UKH"/>
                         <viewControllerLayoutGuide type="bottom" id="TDa-Zb-Jbq"/>
@@ -69,7 +69,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xlh-Z7-83D">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WUXAlbumCollectionViewCellIdentifier" id="xlh-Z7-83D">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="782" y="399"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Detail View Controller-->
         <scene sceneID="Us3-hH-t3v">
             <objects>
-                <viewController storyboardIdentifier="PhotoDetailViewController" id="xHF-CM-9sy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoDetailViewController" id="xHF-CM-9sy" customClass="WUXPhotoDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m38-WE-BSc"/>
                         <viewControllerLayoutGuide type="bottom" id="xcB-WR-UXe"/>
@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="782" y="1053"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile View Controller-->
         <scene sceneID="iFv-0h-1WJ">
             <objects>
-                <viewController id="zHL-Jn-aJX" sceneMemberID="viewController">
+                <viewController id="zHL-Jn-aJX" customClass="WUXProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YFu-xD-2ym"/>
                         <viewControllerLayoutGuide type="bottom" id="RgO-0M-32r"/>
@@ -132,33 +132,33 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYU-zc-xQv">
                                 <rect key="frame" x="16" y="20" width="288" height="499"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-u5-M5C">
-                                        <rect key="frame" x="0.0" y="115" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-u5-M5C">
+                                        <rect key="frame" x="0.0" y="115" width="96" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InD-IA-kOt">
-                                        <rect key="frame" x="0.0" y="173" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InD-IA-kOt">
+                                        <rect key="frame" x="0.0" y="173" width="52" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPq-QB-ab3">
-                                        <rect key="frame" x="0.0" y="144" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPq-QB-ab3">
+                                        <rect key="frame" x="0.0" y="144" width="76" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QF-5Z-cGq">
-                                        <rect key="frame" x="0.0" y="202" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QF-5Z-cGq">
+                                        <rect key="frame" x="0.0" y="202" width="81" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l07-2Y-ncg">
-                                        <rect key="frame" x="0.0" y="231" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNS No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l07-2Y-ncg">
+                                        <rect key="frame" x="0.0" y="231" width="66" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -235,7 +235,7 @@
                             <constraint firstItem="sYU-zc-xQv" firstAttribute="top" secondItem="YFu-xD-2ym" secondAttribute="bottom" id="YHb-5f-jMd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ivY-f0-kjs"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="ivY-f0-kjs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3i-v0-xuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,11 +261,11 @@
             </objects>
             <point key="canvasLocation" x="-47" y="399"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="Lb7-iL-DRM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wp0-Rq-nO6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="zW4-uc-vwU"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="zW4-uc-vwU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqI-uZ-37h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -287,6 +287,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eRK-6h-eKM"/>
+        <segue reference="k62-79-k0A"/>
     </inferredMetricsTieBreakers>
 </document>
