@@ -10,4 +10,13 @@
 
 @interface WUXProfile : NSObject
 
+@property (nonatomic, copy) NSString *profilePicUrlString;
+@property (nonatomic, copy) NSString *profileUserName;
+@property (nonatomic, copy) NSString *profilePassword;
+@property (nonatomic, copy) NSString *profileEmail;
+@property (nonatomic, copy) NSString *profilephoneNo;
+@property (nonatomic, copy) NSString *profileSnsNo;
+
+- (id) initWithDictionary:(NSDictionary *) dictionary;
+
 @end

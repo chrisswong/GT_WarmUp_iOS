@@ -10,18 +10,32 @@
 
 @interface WUXAlbumViewController ()
 
+@property (nonatomic, strong) NSArray *photos;
+
 @end
 
 @implementation WUXAlbumViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    __weak typeof(self)weakSelf = self;
+    [API_MANAGER retrievePhotosWithCompletion:^(NSArray *photos, NSError *error) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        if (!strongSelf) {
+            return ;
+        }
+        
+        if (error) {
+            [[UIAlertView alertViewWithError:error] show];
+            return;
+        }
+        
+        if (photos) {
+            strongSelf.photos = photos;
+        }
+    }];
+    
 }
 
 /*
@@ -34,4 +48,11 @@
 }
 */
 
+#pragma mark - Setter
+- (void) setPhotos:(NSArray *)photos {
+    if (photos) {
+        _photos = photos;
+        
+    }
+}
 @end

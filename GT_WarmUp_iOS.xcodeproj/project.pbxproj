@@ -11,6 +11,7 @@
 		8308F5141AAEE495003D36A2 /* WUXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5131AAEE495003D36A2 /* WUXApiManager.m */; };
 		8308F5171AAEE4B2003D36A2 /* WUXFavouriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5161AAEE4B2003D36A2 /* WUXFavouriteManager.m */; };
 		8308F51A1AAEE630003D36A2 /* WUXProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5191AAEE630003D36A2 /* WUXProfile.m */; };
+		8308F51F1AAEED0F003D36A2 /* UIAlertView+GTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F51E1AAEED0F003D36A2 /* UIAlertView+GTCategory.m */; };
 		8321462F1A9B75F3004EBBE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321462E1A9B75F3004EBBE4 /* main.m */; };
 		832146321A9B75F3004EBBE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146311A9B75F3004EBBE4 /* AppDelegate.m */; };
 		832146351A9B75F3004EBBE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146341A9B75F3004EBBE4 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 		8308F5181AAEE630003D36A2 /* WUXProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXProfile.h; path = Model/WUXProfile.h; sourceTree = "<group>"; };
 		8308F5191AAEE630003D36A2 /* WUXProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXProfile.m; path = Model/WUXProfile.m; sourceTree = "<group>"; };
 		8308F51B1AAEE809003D36A2 /* WUXPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUXPrefixHeader.pch; sourceTree = "<group>"; };
+		8308F51D1AAEED0F003D36A2 /* UIAlertView+GTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+GTCategory.h"; path = "Common/UIAlertView+GTCategory.h"; sourceTree = "<group>"; };
+		8308F51E1AAEED0F003D36A2 /* UIAlertView+GTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+GTCategory.m"; path = "Common/UIAlertView+GTCategory.m"; sourceTree = "<group>"; };
 		832146291A9B75F3004EBBE4 /* GT_WarmUp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GT_WarmUp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321462D1A9B75F3004EBBE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8321462E1A9B75F3004EBBE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +112,15 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
+		8308F51C1AAEECDF003D36A2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8308F51D1AAEED0F003D36A2 /* UIAlertView+GTCategory.h */,
+				8308F51E1AAEED0F003D36A2 /* UIAlertView+GTCategory.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		832146201A9B75F2004EBBE4 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 		8321462B1A9B75F3004EBBE4 /* GT_WarmUp_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8308F51C1AAEECDF003D36A2 /* Common */,
 				8308F50E1AAEE45A003D36A2 /* Manager */,
 				832146651A9B7E41004EBBE4 /* View */,
 				832146551A9B7B85004EBBE4 /* Model */,
@@ -389,6 +402,7 @@
 				832146581A9B7BAF004EBBE4 /* WUXPhoto.m in Sources */,
 				832146681A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m in Sources */,
 				8308F5171AAEE4B2003D36A2 /* WUXFavouriteManager.m in Sources */,
+				8308F51F1AAEED0F003D36A2 /* UIAlertView+GTCategory.m in Sources */,
 				8321465E1A9B7DC5004EBBE4 /* WUXAlbumViewController.m in Sources */,
 				8308F5111AAEE47D003D36A2 /* WUXAppManager.m in Sources */,
 				832146641A9B7E03004EBBE4 /* WUXFavouriteViewController.m in Sources */,
@@ -514,6 +528,8 @@
 			baseConfigurationReference = 158A0E312C34B95F548C5240 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/chris/GT_WarmUp_iOS/GT_WarmUp_iOS/WUXPrefixHeader.pch;
 				INFOPLIST_FILE = GT_WarmUp_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -526,6 +542,8 @@
 			baseConfigurationReference = 2AC127D5B6E448258C63A747 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/chris/GT_WarmUp_iOS/GT_WarmUp_iOS/WUXPrefixHeader.pch;
 				INFOPLIST_FILE = GT_WarmUp_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
