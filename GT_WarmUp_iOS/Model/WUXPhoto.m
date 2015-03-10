@@ -7,6 +7,7 @@
 //
 
 #import "WUXPhoto.h"
+#import <RMMapper/RMMapper.h>
 
 #define kAPIResponseAlbumId @"albumId"
 #define kAPIResponsePhotoId @"id"
@@ -14,20 +15,21 @@
 #define kAPIResponsePhotoUrl @"url"
 #define kAPIResponseThumbnailUrl @"thumbnailUrl"
 
+@interface WUXPhoto () <RMMapping>
+
+@end
+
 @implementation WUXPhoto
 
-- (instancetype) initWithDictionary:(NSDictionary *) dictionary {
-    self = [self init];
-    if (self) {
-        
-        self.albumId = dictionary[kAPIResponseAlbumId];
-        self.photoId = dictionary[kAPIResponsePhotoId];
-        self.photoTitle = dictionary[kAPIResponsePhotoTitle];
-        self.photoUrl = dictionary[kAPIResponsePhotoUrl];
-        self.photoThumbnailUrl = dictionary[kAPIResponseThumbnailUrl];
-        
-    }
-    return self;
+- (NSDictionary *)rm_dataKeysForClassProperties
+{
+    // country_code is json key, countryCode is class property
+    return @{
+             @"photoId" : @"id",
+             @"photoTitle" : @"title",
+             @"photoUrl" : @"url",
+             @"photoThumbnailUrl" : @"thumbnailUrl"
+             };
 }
 
 @end

@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 
 #import "WUXProfile.h"
+#import "WUXPhoto.h"
 #import <RMMapper/RMMapper.h>
 
 @implementation WUXApiManager
@@ -40,6 +41,32 @@
 
 - (void) retrievePhotosWithCompletion:(void (^)(NSArray *, NSError *)) completion {
     
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:[WUXApiManager photoUrlString] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if (responseObject) {
+            
+//            NSArray *photos = [RMMapper arrayOfClass:[WUXPhoto class] fromArrayOfDictionary:responseObject];
+            
+            WUXPhoto *photo = [WUXPhoto new];
+            photo = [RMMapper populateObject:photo fromDictionary:responseObject];
+            
+            NSArray *photos = [NSArray arrayWithObject:photo];
+            
+            completion(photos, nil);
+            
+        } else {
+            completion(nil, nil);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+    
+}
+
++ (NSString *) photoUrlString {
+    return @"http://jsonplaceholder.typicode.com/photos/10";
 }
 
 @end

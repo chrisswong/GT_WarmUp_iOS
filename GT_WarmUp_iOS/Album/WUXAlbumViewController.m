@@ -7,10 +7,12 @@
 //
 
 #import "WUXAlbumViewController.h"
+#import "WUXAlbumCollectionViewCell.h"
 
-@interface WUXAlbumViewController ()
+@interface WUXAlbumViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray *photos;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -38,6 +40,20 @@
     
 }
 
+#pragma mark - UICollectionView DataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return [self.photos count];
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WUXAlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:WUXAlbumCollectionViewCellIdentifier forIndexPath:indexPath];
+    return cell;
+}
+
+#pragma mark - UICollectionDelegate
+
 /*
 #pragma mark - Navigation
 
@@ -52,7 +68,7 @@
 - (void) setPhotos:(NSArray *)photos {
     if (photos) {
         _photos = photos;
-        
+        [self.collectionView reloadData];
     }
 }
 @end

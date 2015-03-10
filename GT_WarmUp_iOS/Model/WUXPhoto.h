@@ -10,12 +10,10 @@
 
 @interface WUXPhoto : NSObject
 
-@property (nonatomic, copy) NSString *albumId;
-@property (nonatomic, copy) NSString *photoId;
-@property (nonatomic, copy) NSString *photoTitle;
-@property (nonatomic, copy) NSString *photoUrl;
-@property (nonatomic, copy) NSString *photoThumbnailUrl;
-
-- (instancetype) initWithDictionary:(NSDictionary *) dictionary;
+@property (nonatomic) NSInteger *albumId;
+@property (nonatomic) NSInteger *photoId;
+@property (nonatomic, strong) NSString *photoTitle;
+@property (nonatomic, strong) NSString *photoUrl;
+@property (nonatomic, strong) NSString *photoThumbnailUrl;
 
 @end

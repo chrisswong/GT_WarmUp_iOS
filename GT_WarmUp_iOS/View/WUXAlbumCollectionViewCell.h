@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class WUXPhoto;
+
 extern NSString* WUXAlbumCollectionViewCellIdentifier;
 
 @interface WUXAlbumCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (copy, nonatomic) void (^favButtonDidTapBlock)(WUXAlbumCollectionViewCell *cell);
+
+- (void) configureCellWithPhoto:(WUXPhoto *) photo;
+
 
 @end

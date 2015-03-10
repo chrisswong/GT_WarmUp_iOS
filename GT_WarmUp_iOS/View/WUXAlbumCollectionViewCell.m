@@ -7,9 +7,23 @@
 //
 
 #import "WUXAlbumCollectionViewCell.h"
+#import "WUXPhoto.h"
 
 NSString* WUXAlbumCollectionViewCellIdentifier = @"WUXAlbumCollectionViewCellIdentifier";
 
 @implementation WUXAlbumCollectionViewCell
+
+- (IBAction)favButtonDidTap:(UIButton *)sender {
+    
+    if (self.favButtonDidTapBlock) {
+        self.favButtonDidTapBlock(self);
+    }
+}
+
+- (void) configureCellWithPhoto:(WUXPhoto *) photo {
+    
+    NSURL *url = [NSURL URLWithString:photo.photoThumbnailUrl];
+    [self.imageView sd_setImageWithURL:url];
+}
 
 @end
