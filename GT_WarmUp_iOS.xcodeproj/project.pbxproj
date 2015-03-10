@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8308F5111AAEE47D003D36A2 /* WUXAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5101AAEE47D003D36A2 /* WUXAppManager.m */; };
+		8308F5141AAEE495003D36A2 /* WUXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5131AAEE495003D36A2 /* WUXApiManager.m */; };
+		8308F5171AAEE4B2003D36A2 /* WUXFavouriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5161AAEE4B2003D36A2 /* WUXFavouriteManager.m */; };
+		8308F51A1AAEE630003D36A2 /* WUXProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308F5191AAEE630003D36A2 /* WUXProfile.m */; };
 		8321462F1A9B75F3004EBBE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321462E1A9B75F3004EBBE4 /* main.m */; };
 		832146321A9B75F3004EBBE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146311A9B75F3004EBBE4 /* AppDelegate.m */; };
 		832146351A9B75F3004EBBE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832146341A9B75F3004EBBE4 /* ViewController.m */; };
@@ -37,6 +41,15 @@
 		158A0E312C34B95F548C5240 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2AC127D5B6E448258C63A747 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4100FFB4FD68BEC5BFB3BB6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8308F50F1AAEE47D003D36A2 /* WUXAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXAppManager.h; path = Manager/WUXAppManager.h; sourceTree = "<group>"; };
+		8308F5101AAEE47D003D36A2 /* WUXAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXAppManager.m; path = Manager/WUXAppManager.m; sourceTree = "<group>"; };
+		8308F5121AAEE495003D36A2 /* WUXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXApiManager.h; path = Manager/WUXApiManager.h; sourceTree = "<group>"; };
+		8308F5131AAEE495003D36A2 /* WUXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXApiManager.m; path = Manager/WUXApiManager.m; sourceTree = "<group>"; };
+		8308F5151AAEE4B2003D36A2 /* WUXFavouriteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXFavouriteManager.h; path = Manager/WUXFavouriteManager.h; sourceTree = "<group>"; };
+		8308F5161AAEE4B2003D36A2 /* WUXFavouriteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXFavouriteManager.m; path = Manager/WUXFavouriteManager.m; sourceTree = "<group>"; };
+		8308F5181AAEE630003D36A2 /* WUXProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUXProfile.h; path = Model/WUXProfile.h; sourceTree = "<group>"; };
+		8308F5191AAEE630003D36A2 /* WUXProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUXProfile.m; path = Model/WUXProfile.m; sourceTree = "<group>"; };
+		8308F51B1AAEE809003D36A2 /* WUXPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUXPrefixHeader.pch; sourceTree = "<group>"; };
 		832146291A9B75F3004EBBE4 /* GT_WarmUp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GT_WarmUp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8321462D1A9B75F3004EBBE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8321462E1A9B75F3004EBBE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8308F50E1AAEE45A003D36A2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8308F50F1AAEE47D003D36A2 /* WUXAppManager.h */,
+				8308F5101AAEE47D003D36A2 /* WUXAppManager.m */,
+				8308F5121AAEE495003D36A2 /* WUXApiManager.h */,
+				8308F5131AAEE495003D36A2 /* WUXApiManager.m */,
+				8308F5151AAEE4B2003D36A2 /* WUXFavouriteManager.h */,
+				8308F5161AAEE4B2003D36A2 /* WUXFavouriteManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		832146201A9B75F2004EBBE4 = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +132,13 @@
 		8321462B1A9B75F3004EBBE4 /* GT_WarmUp_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8308F50E1AAEE45A003D36A2 /* Manager */,
 				832146651A9B7E41004EBBE4 /* View */,
 				832146551A9B7B85004EBBE4 /* Model */,
 				832146521A9B7B33004EBBE4 /* Profile */,
 				832146531A9B7B3C004EBBE4 /* Album */,
 				832146541A9B7B43004EBBE4 /* Favourite */,
+				8308F51B1AAEE809003D36A2 /* WUXPrefixHeader.pch */,
 				832146301A9B75F3004EBBE4 /* AppDelegate.h */,
 				832146311A9B75F3004EBBE4 /* AppDelegate.m */,
 				832146331A9B75F3004EBBE4 /* ViewController.h */,
@@ -183,6 +211,8 @@
 			children = (
 				832146561A9B7BAF004EBBE4 /* WUXPhoto.h */,
 				832146571A9B7BAF004EBBE4 /* WUXPhoto.m */,
+				8308F5181AAEE630003D36A2 /* WUXProfile.h */,
+				8308F5191AAEE630003D36A2 /* WUXProfile.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -349,14 +379,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8308F5141AAEE495003D36A2 /* WUXApiManager.m in Sources */,
 				832146611A9B7DDD004EBBE4 /* WUXPhotoDetailViewController.m in Sources */,
 				832146351A9B75F3004EBBE4 /* ViewController.m in Sources */,
 				8321465B1A9B7D91004EBBE4 /* WUXProfileViewController.m in Sources */,
 				832146321A9B75F3004EBBE4 /* AppDelegate.m in Sources */,
+				8308F51A1AAEE630003D36A2 /* WUXProfile.m in Sources */,
 				8321462F1A9B75F3004EBBE4 /* main.m in Sources */,
 				832146581A9B7BAF004EBBE4 /* WUXPhoto.m in Sources */,
 				832146681A9B7E65004EBBE4 /* WUXAlbumCollectionViewCell.m in Sources */,
+				8308F5171AAEE4B2003D36A2 /* WUXFavouriteManager.m in Sources */,
 				8321465E1A9B7DC5004EBBE4 /* WUXAlbumViewController.m in Sources */,
+				8308F5111AAEE47D003D36A2 /* WUXAppManager.m in Sources */,
 				832146641A9B7E03004EBBE4 /* WUXFavouriteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

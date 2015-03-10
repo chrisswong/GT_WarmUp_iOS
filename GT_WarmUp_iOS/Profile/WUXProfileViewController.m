@@ -7,6 +7,7 @@
 //
 
 #import "WUXProfileViewController.h"
+#import "WUXProfile.h"
 
 @interface WUXProfileViewController ()
 
@@ -14,14 +15,9 @@
 
 @implementation WUXProfileViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+        
 }
 
 @end
