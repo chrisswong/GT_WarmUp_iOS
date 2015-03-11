@@ -60,8 +60,6 @@
             WUXPhotoDetailViewController *detailViewController = (WUXPhotoDetailViewController *) segue.destinationViewController;
             
             if ([sender isKindOfClass:[UITableViewCell class]]) {
-                
-                UITableViewCell *cell = (UITableViewCell *) sender;
                 NSIndexPath *cellIndexPath = [self.tableView indexPathForSelectedRow];
                 if (cellIndexPath) {
                     detailViewController.photo = self.favPhotoList[cellIndexPath.row];

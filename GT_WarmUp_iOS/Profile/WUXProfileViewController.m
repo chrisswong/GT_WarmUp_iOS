@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneNoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *snsNoLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userProfileImageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -29,6 +30,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.spinner startAnimating];
     __weak typeof(self)weakSelf = self;
     [API_MANAGER retrieveProfileWithCompletion:^(WUXProfile *profile, NSError *error) {
         
@@ -38,6 +40,7 @@
             return;
         }
         
+        [strongSelf.spinner stopAnimating];
         if (!error) {
             [strongSelf updateUIWithProfile:profile];
         } else {

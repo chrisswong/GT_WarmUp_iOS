@@ -9,6 +9,7 @@
 #import "WUXPhotoDetailViewController.h"
 #import "WUXPhoto.h"
 @interface WUXPhotoDetailViewController () <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -38,9 +39,12 @@
 
 #pragma mark - Private
 - (void) updateUI {
+    [self.spinner startAnimating];
     NSURL *url = [NSURL URLWithString:self.photo.photoUrl];
     if (url) {
-        [self.imageView sd_setImageWithURL:url];
+        [self.imageView sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            [self.spinner stopAnimating];
+        }];
     }
 }
 

@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSArray *photos;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -22,6 +23,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.spinner startAnimating];
     __weak typeof(self)weakSelf = self;
     [API_MANAGER retrievePhotosWithCompletion:^(NSArray *photos, NSError *error) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
@@ -30,6 +32,7 @@
             return ;
         }
         
+        [strongSelf.spinner stopAnimating]; 
         if (error) {
             [[UIAlertView alertViewWithError:error] show];
             return;
@@ -38,7 +41,6 @@
         if (photos) {
             strongSelf.photos = photos;
             [strongSelf updateFavouritePhotos];
-            
         }
     }];
     

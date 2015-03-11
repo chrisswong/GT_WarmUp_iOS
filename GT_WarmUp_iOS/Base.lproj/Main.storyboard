@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6i-BS-s2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="1053"/>
+            <point key="canvasLocation" x="378" y="1053"/>
         </scene>
         <!--Album-->
         <scene sceneID="JlP-7Q-H6Q">
@@ -70,6 +70,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-vI-rWJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Znv-bx-7Bd">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -120,10 +121,15 @@
                                     <outlet property="delegate" destination="dTb-Rn-mmP" id="ee2-jM-B8Q"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dK0-BV-R2K">
+                                <rect key="frame" x="151" y="275" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="R2Z-vI-rWJ" secondAttribute="trailing" id="NHU-Yn-Q9r"/>
+                            <constraint firstAttribute="centerX" secondItem="dK0-BV-R2K" secondAttribute="centerX" id="UM7-VF-Pjx"/>
+                            <constraint firstAttribute="centerY" secondItem="dK0-BV-R2K" secondAttribute="centerY" id="ckt-Iu-1hV"/>
                             <constraint firstAttribute="bottom" secondItem="R2Z-vI-rWJ" secondAttribute="bottom" id="egs-wI-wtI"/>
                             <constraint firstItem="R2Z-vI-rWJ" firstAttribute="top" secondItem="2LP-TD-bBJ" secondAttribute="top" id="jzh-15-VZk"/>
                             <constraint firstItem="R2Z-vI-rWJ" firstAttribute="leading" secondItem="2LP-TD-bBJ" secondAttribute="leading" id="yij-c2-goa"/>
@@ -132,6 +138,7 @@
                     <navigationItem key="navigationItem" title="Album" id="Q6z-HS-0Mb"/>
                     <connections>
                         <outlet property="collectionView" destination="R2Z-vI-rWJ" id="0fj-Y0-QCV"/>
+                        <outlet property="spinner" destination="dK0-BV-R2K" id="uwk-s1-drt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRL-qv-a8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,18 +168,26 @@
                                     <outlet property="delegate" destination="xHF-CM-9sy" id="E4q-EX-K1u"/>
                                 </connections>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XSS-8G-ovI">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XSS-8G-ovI" secondAttribute="centerX" id="YYo-ln-VzG"/>
+                            <constraint firstAttribute="centerY" secondItem="XSS-8G-ovI" secondAttribute="centerY" id="auV-el-0NZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xUh-zh-iba"/>
                     <connections>
                         <outlet property="imageView" destination="tid-m3-sLR" id="yeZ-9C-iC6"/>
                         <outlet property="scrollView" destination="iUL-XJ-9gJ" id="4wY-Wt-qBb"/>
+                        <outlet property="spinner" destination="XSS-8G-ovI" id="o2W-jH-5n8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HC-nC-B3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="1053"/>
+            <point key="canvasLocation" x="782" y="1053"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="iFv-0h-1WJ">
@@ -284,6 +299,9 @@
                                     <constraint firstItem="Mdi-oM-KP8" firstAttribute="leading" secondItem="5NF-Sr-BFN" secondAttribute="leading" id="yTn-CS-uR2"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-nk-g9f">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -291,6 +309,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="sYU-zc-xQv" secondAttribute="trailing" id="FJD-dE-E01"/>
                             <constraint firstItem="sYU-zc-xQv" firstAttribute="leading" secondItem="TgM-9b-XUS" secondAttribute="leadingMargin" id="UAv-Za-zk7"/>
                             <constraint firstItem="sYU-zc-xQv" firstAttribute="top" secondItem="YFu-xD-2ym" secondAttribute="bottom" id="YHb-5f-jMd"/>
+                            <constraint firstAttribute="centerY" secondItem="1I7-nk-g9f" secondAttribute="centerY" id="fKQ-22-kGg"/>
+                            <constraint firstAttribute="centerX" secondItem="1I7-nk-g9f" secondAttribute="centerX" id="pLj-UY-lzM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="ivY-f0-kjs"/>
@@ -299,13 +319,14 @@
                         <outlet property="passwordLabel" destination="Mdi-oM-KP8" id="w53-u9-3g6"/>
                         <outlet property="phoneNoLabel" destination="hJp-Iy-JtQ" id="X6K-Vw-Unc"/>
                         <outlet property="snsNoLabel" destination="jHn-e4-22v" id="5fE-bx-ojT"/>
+                        <outlet property="spinner" destination="1I7-nk-g9f" id="X6v-3S-N51"/>
                         <outlet property="userNameLabel" destination="5NF-Sr-BFN" id="rpm-Ok-7V7"/>
                         <outlet property="userProfileImageView" destination="Eoe-pI-qWk" id="Kx9-i8-ddc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3i-v0-xuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="-409"/>
+            <point key="canvasLocation" x="366" y="-251"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZP9-ka-yhr">
