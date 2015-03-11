@@ -52,6 +52,8 @@
     self.emailLabel.text = profile.profileEmail;
     self.phoneNoLabel.text = profile.profilephoneNo;
     self.snsNoLabel.text = profile.profileSnsNo;
+
+    [self.userProfileImageView sd_setImageWithURL:[NSURL URLWithString:profile.profilePicUrlString]];
 }
 
 @end

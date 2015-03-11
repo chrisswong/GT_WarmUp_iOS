@@ -24,6 +24,8 @@ NSString* WUXAlbumCollectionViewCellIdentifier = @"WUXAlbumCollectionViewCellIde
     
     NSURL *url = [NSURL URLWithString:photo.photoThumbnailUrl];
     [self.imageView sd_setImageWithURL:url];
+    
+    self.favButton.selected = photo.isFavourite;
 }
 
 @end
