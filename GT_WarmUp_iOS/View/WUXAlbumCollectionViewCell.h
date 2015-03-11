@@ -15,6 +15,7 @@ extern NSString* WUXAlbumCollectionViewCellIdentifier;
 @interface WUXAlbumCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (copy, nonatomic) void (^favButtonDidTapBlock)(WUXAlbumCollectionViewCell *cell);
+@property (weak, nonatomic) IBOutlet UIButton *favButton;
 
 - (void) configureCellWithPhoto:(WUXPhoto *) photo;
 

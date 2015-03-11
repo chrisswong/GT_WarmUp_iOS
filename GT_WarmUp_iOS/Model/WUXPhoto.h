@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WUXPhoto : NSObject
+@interface WUXPhoto : NSObject <NSCoding>
 
-@property (nonatomic) NSInteger *albumId;
-@property (nonatomic) NSInteger *photoId;
+@property (nonatomic) NSInteger albumId;
+@property (nonatomic) NSInteger photoId;
 @property (nonatomic, strong) NSString *photoTitle;
 @property (nonatomic, strong) NSString *photoUrl;
 @property (nonatomic, strong) NSString *photoThumbnailUrl;
+@property (nonatomic) BOOL isFavourite;
+
+- (instancetype) initWithDictionary:(NSDictionary *) dictionary;
 
 @end

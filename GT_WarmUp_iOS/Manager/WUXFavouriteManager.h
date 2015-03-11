@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@class WUXPhoto;
+
+extern NSString *favouriteListKey;
 
 @interface WUXFavouriteManager : NSObject
+
+- (void) favouritePhoto:(WUXPhoto *) photo;
+- (void) unfavouritePhoto:(WUXPhoto *) photo;
+- (NSArray *) favouritePhotoList;
 
 @end

@@ -32,4 +32,35 @@
              };
 }
 
+- (instancetype) initWithDictionary:(NSDictionary *) dictionary {
+    self = [self init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+#pragma mark - NSCoding
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:@(self.photoId) forKey:@"photoId"];
+    [aCoder encodeObject:@(self.albumId) forKey:@"albumId"];
+    [aCoder encodeObject:self.photoTitle forKey:@"photoTitle"];
+    [aCoder encodeObject:self.photoUrl forKey:@"photoUrl"];
+    [aCoder encodeObject:self.photoThumbnailUrl forKey:@"photoThumbnailUrl"];
+    [aCoder encodeObject:@(YES) forKey:@"isFavourite"];
+}
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [self init];
+    if (self) {
+        self.photoId = [[aDecoder decodeObjectForKey:@"photoId"] integerValue];
+        self.albumId = [[aDecoder decodeObjectForKey:@"albumId"] integerValue];
+        self.photoTitle = [aDecoder decodeObjectForKey:@"photoTitle"];
+        self.photoUrl = [aDecoder decodeObjectForKey:@"photoUrl"];
+        self.photoThumbnailUrl = [aDecoder decodeObjectForKey:@"photoThumbnailUrl"];
+        self.isFavourite = [[aDecoder decodeObjectForKey:@"isFavourite"] boolValue];
+    }
+    return self;
+}
+
+
 @end

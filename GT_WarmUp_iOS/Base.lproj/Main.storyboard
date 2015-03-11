@@ -102,6 +102,7 @@
                                             <constraint firstItem="SsY-Zc-2Hg" firstAttribute="top" secondItem="xlh-Z7-83D" secondAttribute="top" id="lYb-Ff-0NY"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="favButton" destination="72c-2Q-yXP" id="KF2-Pf-qf6"/>
                                             <outlet property="imageView" destination="SsY-Zc-2Hg" id="FUX-Wi-BYe"/>
                                             <segue destination="xHF-CM-9sy" kind="push" id="k62-79-k0A"/>
                                         </connections>
