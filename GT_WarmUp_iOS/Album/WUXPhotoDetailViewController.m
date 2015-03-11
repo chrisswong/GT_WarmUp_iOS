@@ -7,8 +7,8 @@
 //
 
 #import "WUXPhotoDetailViewController.h"
-
-@interface WUXPhotoDetailViewController ()
+#import "WUXPhoto.h"
+@interface WUXPhotoDetailViewController () <UIScrollViewDelegate>
 
 @end
 
@@ -22,6 +22,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (self.photo) {
+        [self updateUI];
+    }
+}
+
+- (void) setPhoto:(WUXPhoto *)photo {
+    _photo = [photo copy];
+    [self updateUI];
+}
+
+#pragma mark - Private
+- (void) updateUI {
+    NSURL *url = [NSURL URLWithString:self.photo.photoUrl];
+    if (url) {
+        [self.imageView sd_setImageWithURL:url];
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.imageView;
 }
 
 /*

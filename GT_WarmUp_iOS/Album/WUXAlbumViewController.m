@@ -7,6 +7,7 @@
 //
 
 #import "WUXAlbumViewController.h"
+#import "WUXPhotoDetailViewController.h"
 #import "WUXAlbumCollectionViewCell.h"
 #import "WUXPhoto.h"
 
@@ -65,15 +66,30 @@
 
 #pragma mark - UICollectionDelegate
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"PHOTO_DETAIL"]) {
+        if ([segue.destinationViewController isKindOfClass:[WUXPhotoDetailViewController class]]) {
+            
+            WUXAlbumCollectionViewCell *cell = (WUXAlbumCollectionViewCell *) sender;
+            
+            NSIndexPath *cellIndexPath = [self.collectionView indexPathForCell:cell];
+            
+            if (cellIndexPath) {
+                WUXPhotoDetailViewController *detailViewController = (WUXPhotoDetailViewController *) segue.destinationViewController;
+                WUXPhoto *photo = self.photos[cellIndexPath.row];
+                detailViewController.photo = photo;
+            }
+            
+
+        }
+    }
 }
-*/
 
 #pragma mark - Private
 

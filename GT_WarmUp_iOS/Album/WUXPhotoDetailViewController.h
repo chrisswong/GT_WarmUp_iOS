@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class WUXPhoto;
+
 @interface WUXPhotoDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (copy, nonatomic) WUXPhoto *photo;
 
 @end
