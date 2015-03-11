@@ -27,13 +27,11 @@ NSString *favouriteListKey = @"com.gtomato.enterprise.ios.warmup.favouriteListKe
         return;
     }
     
-    NSData *favouriteListData = [self.standardUserDefaults objectForKey:favouriteListKey];
+    NSArray *favouriteList = [self favouritePhotoList];
     NSMutableArray *tempList = nil;
-    NSArray *favouriteList = nil;
-    if (!favouriteListData) {
+    if ([favouriteList count] == 0) {
         tempList = [NSMutableArray array];
     } else {
-        favouriteList = [NSKeyedUnarchiver unarchiveObjectWithData:favouriteListData];
         tempList = [NSMutableArray arrayWithArray:favouriteList];
     }
     [tempList addObject:photo];
@@ -46,27 +44,22 @@ NSString *favouriteListKey = @"com.gtomato.enterprise.ios.warmup.favouriteListKe
         return;
     }
     
-    NSData *favouriteListData = [self.standardUserDefaults objectForKey:favouriteListKey];
     
-    if (!favouriteListData) {
-        return;
-    } else {
-        NSArray *favouriteList = [NSKeyedUnarchiver unarchiveObjectWithData:favouriteListData];
+    NSArray *favouriteList = [self favouritePhotoList];
 
-        if ([favouriteList count] == 0) {
-            return;
-        }
-        
-        NSMutableArray *tempList = [NSMutableArray arrayWithArray:favouriteList];
-        
-        for (NSInteger i = 0 ; i< [favouriteList count] ; i++) {
-            WUXPhoto *aPhoto = favouriteList[i];
-            if (aPhoto.photoId == photo.photoId) {
-                [tempList removeObject:aPhoto];
-                favouriteList = [NSArray arrayWithArray:tempList];
-                [self commitFavouriteList:favouriteList];
-                break;
-            }
+    if ([favouriteList count] == 0) {
+        return;
+    }
+    
+    NSMutableArray *tempList = [NSMutableArray arrayWithArray:favouriteList];
+    
+    for (NSInteger i = 0 ; i< [favouriteList count] ; i++) {
+        WUXPhoto *aPhoto = favouriteList[i];
+        if (aPhoto.photoId == photo.photoId) {
+            [tempList removeObject:aPhoto];
+            favouriteList = [NSArray arrayWithArray:tempList];
+            [self commitFavouriteList:favouriteList];
+            break;
         }
     }
 }
