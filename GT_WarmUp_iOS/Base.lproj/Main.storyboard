@@ -104,7 +104,7 @@
                                         <connections>
                                             <outlet property="favButton" destination="72c-2Q-yXP" id="KF2-Pf-qf6"/>
                                             <outlet property="imageView" destination="SsY-Zc-2Hg" id="FUX-Wi-BYe"/>
-                                            <segue destination="xHF-CM-9sy" kind="push" id="k62-79-k0A"/>
+                                            <segue destination="xHF-CM-9sy" kind="push" identifier="PHOTO_DETAIL" id="k62-79-k0A"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -142,9 +142,26 @@
                     <view key="view" contentMode="scaleToFill" id="f40-bp-haf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.5" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="iUL-XJ-9gJ">
+                                <rect key="frame" x="-20" y="-20" width="360" height="608"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tid-m3-sLR">
+                                        <rect key="frame" x="20" y="20" width="320" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="xHF-CM-9sy" id="E4q-EX-K1u"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xUh-zh-iba"/>
+                    <connections>
+                        <outlet property="imageView" destination="tid-m3-sLR" id="yeZ-9C-iC6"/>
+                        <outlet property="scrollView" destination="iUL-XJ-9gJ" id="4wY-Wt-qBb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HC-nC-B3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
