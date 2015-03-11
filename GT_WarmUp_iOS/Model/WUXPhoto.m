@@ -61,6 +61,17 @@
     }
     return self;
 }
+#pragma mark - NSCopying
+- (id)copyWithZone:(NSZone *)zone {
+    
+    WUXPhoto *copy = [[WUXPhoto allocWithZone:zone] init];
+    [copy setAlbumId:self.albumId];
+    [copy setPhotoId:self.photoId];
+    [copy setPhotoTitle:self.photoTitle];
+    [copy setPhotoUrl:self.photoUrl];
+    [copy setPhotoThumbnailUrl:self.photoThumbnailUrl];
+    return copy;
+}
 
 
 @end

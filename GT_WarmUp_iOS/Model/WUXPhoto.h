@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WUXPhoto : NSObject <NSCoding>
+@interface WUXPhoto : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic) NSInteger albumId;
 @property (nonatomic) NSInteger photoId;
