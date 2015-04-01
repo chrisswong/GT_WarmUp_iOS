@@ -529,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/chris/GT_WarmUp_iOS/GT_WarmUp_iOS/WUXPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GT_WarmUp_iOS/WUXPrefixHeader.pch";
 				INFOPLIST_FILE = GT_WarmUp_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -543,7 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/chris/GT_WarmUp_iOS/GT_WarmUp_iOS/WUXPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GT_WarmUp_iOS/WUXPrefixHeader.pch";
 				INFOPLIST_FILE = GT_WarmUp_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
